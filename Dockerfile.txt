@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+MAINTAINER amit
+RUN apt-get update
+RUN apt-get install -y python python-pip
+RUN pip install --update pip
+ADD app.py /home/app.py
+WORKDIR /home
+CMD python app.py
